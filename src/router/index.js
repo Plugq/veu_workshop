@@ -1,47 +1,57 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import HomeView from "../views/HomeView.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },
-   { path: '',
-    name: 'toolbar',
-    component: () => import('../views/Toolbar.vue'),
-    children:[
+    path: "/",
+    name: "home",
+    component: HomeView,
+  },
+  {
+    path: "",
+    name: "toolbar",
+    component: () => import("../views/Toolbar.vue"),
+    children: [
       {
-        path: '/about',
-        name: 'about',
-        component: () => import( '../views/AboutView.vue')
+        path: "/about",
+        name: "about",
+        component: () => import("../views/AboutView.vue"),
       },
       {
-      path: '/me',
-      name: 'me',
-      component: () => import('../views/me.vue')
+        path: "/me",
+        name: "me",
+        component: () => import("../views/me.vue"),
       },
       {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/login.vue')
+        path: "/login",
+        name: "login",
+        component: () => import("../views/login.vue"),
       },
       {
-        path: '/detail',
-        name: 'detail',
-        component: () => import('../views/detail.vue')
-      }
-    ]
-   },
-  
-]
+        path: "/detail",
+        name: "detail",
+        component: () => import("../views/detail.vue"),
+      },
+      {
+        path: "/simple",
+        name: "simple",
+        component: () => import("../views/simple.vue"),
+      },
+      {
+        path: "/grade",
+        name: "grade",
+        component: () => import("../views/grade.vue"),
+      },
+    ],
+  },
+];
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

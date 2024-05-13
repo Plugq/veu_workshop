@@ -1,67 +1,92 @@
 <template>
-  <div class="detail">
-    <v-card class="as">
-    <v-row class="as">  
-        <v-col cols="4">
-          <v-card class="img" width="300" height="300">
-              <v-img src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/25/2018/08/c1.jpg?width=700&quality=95"></v-img>
-            </v-card>
+  <div class="container">
+    <v-card>
+      <v-row class="as">
+        <v-col class="box" cols="5">
+          <v-card class="img">
+            <v-img
+              src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/25/2018/08/c1.jpg?width=700&quality=95"
+            ></v-img>
+          </v-card>
         </v-col>
-        <v-col class="data" cols="7">
+        <v-col cols="7">
           <div class="hi">
-            <h1>แนะนำตัวเอง</h1>
-         </div> 
-         <div>
-            <b>ชื่อ:</b> ธีรพงศ์ ต๊ะยศ <br>
-            <b>ชื่อเล่น:</b> ปลั๊ก <br>
-            <b>จบจาก:</b> มหาวิทยาลัยนเรศวร <br>
-            <b>สาขา:</b> วิทยาการคอมพิวเตอร์ <br>
-            <b>งานอดิเรก:</b> ฟังเพลง<br>
-            <b>สิ่งที่เกลียด:</b> หนอน<br>
-            <b>สิ่งที่ชอบ:</b> เล่นเกม<br>
-            <b>จุดแข็ง:</b> เป็นคนควบคุมอารมณ์ได้ดี<br>
-            <b>ทีมกีฬาที่ชอบ:</b> บาร์เซโลน่า(ยุคก่อน)<br>
+            <h2>แนะนำตัวเอง</h2>
           </div>
-        </v-col>  
-        
-    </v-row>
-    </v-card>   
+          <div class="asc">
+            <v-table>
+              <tr>
+                <td><b>ชื่อ:</b> ธีรพงศ์ ต๊ะยศ</td>
+              </tr>
+              <tr>
+                <td><b>ชื่อเล่น:</b> ปลั๊ก</td>
+              </tr>
+              <tr>
+                <td><b>จบจาก:</b> มหาวิทยาลัยนเรศวร</td>
+              </tr>
+              <tr>
+                <td><b>สาขา:</b> วิทยาการคอมพิวเตอร์</td>
+              </tr>
+              <tr>
+                <td><b>งานอดิเรก:</b> ฟังเพลง</td>
+              </tr>
+              <tr>
+                <td><b>สิ่งที่เกลียด:</b> หนอน</td>
+              </tr>
+              <tr>
+                <td><b>สิ่งที่ชอบ:</b> เล่นเกม</td>
+              </tr>
+              <tr>
+                <td><b>จุดแข็ง:</b> เป็นคนควบคุมอารมณ์ได้ดี</td>
+              </tr>
+              <tr>
+                <td><b>ทีมกีฬาที่ชอบ:</b> บาร์เซโลน่า(ยุคก่อน)</td>
+              </tr>
+            </v-table>
+          </div>
+        </v-col>
+      </v-row>
+    </v-card>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-    .detail {
-  display: flex ;
+.container {
+  display: flex;
   justify-content: center;
-  margin-top: 100px ;
+  margin-top: 100px;
   margin-bottom: 100px;
-  
 }
-  .img{
-  display:flex ;
-  justify-content: center;
-  padding: 5px 5px 5px 5px;
-  
- }
- .data{
-  display:block;
-  justify-content: center;
-  padding-inline: 30px;
- }
- .hi{
-  justify-content: center;
+
+.img {
+  display: flex;
+  border: 3px solid black;
+  width: 250px;
+  height: 300px;
+}
+
+.hi {
   margin-top: 5px;
   margin-bottom: 5px;
-  color:skyblue;
+  color: rgb(133, 151, 255);
   font-size: 16px;
- }
- .as{
-  background-color: bisque;
- }
+  padding-inline: 100px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+.as {
+  border-color: rgb(49, 197, 210);
+  border-style: solid;
+  box-shadow: 5px 5px gray;
+  background-color: rgb(222, 235, 240);
+}
+.asc {
+  padding-inline: 30px;
+  color: rgb(14, 76, 55);
+  text-align: center;
+}
 </style>
